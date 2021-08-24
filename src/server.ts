@@ -1,7 +1,10 @@
 import express from "express"; // const express = require('express');
 import { v4 as uuid } from "uuid";
+import cors from "cors";
 
 const app = express();
+
+app.use(cors()); // significa { origin: '*' } todos os sites podem acessar
 app.use(express.json());
 
 interface User {
